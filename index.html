@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Mic Challenge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Word Mic Challenge</h1>
+  <div class="mode-buttons" id="modeButtons">
+    <button id="micModeBtn">🎤 Speak</button>
+    <button id="typeModeBtn">⌨️ Type</button>
+  </div>
+  <button id="startBtn" style="display:none;">Start Game</button>
+  <button id="toggleDarkModeBtn">🌓 Toggle Dark Mode</button>
+  <div id="timer"><span id="timeDisplay"></span><div id="bonusAnimation">+1.5s!</div></div>
+  <div id="target" class="target-word"></div>
+  <div id="inputArea" style="display:none;">
+    <input type="text" id="typedInput" placeholder="Type your word here"/>
+    <button id="submitBtn">Submit</button>
+  </div>
+  <div id="log"></div>
+  <div id="usedWordsList"><strong>Used Words:</strong><ul id="usedWordsUl"></ul></div>
+  <div id="scoreBoard"></div>
+
+  <audio id="successSound" src="https://freesound.org/data/previews/269/269718_5123851-lq.mp3" preload="auto"></audio>
+  <audio id="errorSound" src="https://freesound.org/data/previews/331/331912_3248244-lq.mp3" preload="auto"></audio>
+  <audio id="bonusSound" src="https://freesound.org/data/previews/174/174027_3248244-lq.mp3" preload="auto"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
